@@ -11,8 +11,14 @@
     },
     "devDependencies": {
         "axios": "^0.21",
+        "browser-sync": "^2.29.3",
+        "browser-sync-webpack-plugin": "^2.3.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.1",
+        "jquery": "^3.7.0"
     }
 }
