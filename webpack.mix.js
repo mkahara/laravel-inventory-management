@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,4 +15,8 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
-    ]);
+    ])
+    .browserSync({
+        proxy: 'http://127.0.0.1:8000', // Replace with your local development URL
+        open: false, // Prevent BrowserSync from automatically opening a new browser tab
+    });
